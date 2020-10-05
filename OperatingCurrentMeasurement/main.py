@@ -29,7 +29,7 @@ for v in volt:
     command = ':CHANnel'+chanel+':VOLTage '+v+'\n'
     power_supply.write(command.encode())
     power_supply.write(':OUTPut:STATe 1\n'.encode())
-    sleep(0.1)
+    sleep(0.5)
     result = dmm.query(":MEASure:CURRent:DC?")
     print(result)
 
